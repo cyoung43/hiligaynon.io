@@ -1,7 +1,7 @@
 word,sort,alternate,def_1,def_2,def_3,ex_1,ex_1_english,ex_2,ex_2_english,ex_3,ex_3_english,ex_4,ex_4_english,ex_5,ex_5_english,ex_6,ex_6_english,ex_7,ex_7_english,pt_speech_1,pt_speech_2,compare,notes,origin,ex_8,ex_8_english,ex_9,ex_9_english,ex_10,ex_10_english,ex_11,ex_11_english,ex_12,ex_12_english
 a,1,,"The letter A in Visayan is pronounced as in Spanish, except when it has a cut short, abrupt sound, which can be learned only by hearing",,,bátà,child,,,,,,,,,,,,,,,,,,,,,,,,,,,
 a,2,,Ah; Oh,Well,Why,"A, amó gid inâ.","Ah, that is it, certainly.","A, ikáw galî ang nagabút.","Oh, it is you, that have come.","A, bayái (pabayái) lang ang mga bátà dirâ.","Well, leave the children there alone.","A, pagkaláut sang ákon kapaláran!","Oh, how unfortunate I am!","A, indì ka magsapák sinâ.","Why, don’t take any notice of it.",,,,,,,ah,,,,,,,,,,,,
-#NAME?,1,,A suffix of verbs that have a passive in - on.,,,,,,,,,,,,,,,,,,,"búhat, buháton, higúgma, higugmaón, táhud, tahúron, tahúdon, túman, tumánon, umá, úmhon, ísip, isípon, pa, tíndog, tindogón","This suf?x occurs in the following tenses:
+-a,1,,A suffix of verbs that have a passive in - on.,,,,,,,,,,,,,,,,,,,"búhat, buháton, higúgma, higugmaón, táhud, tahúron, tahúdon, túman, tumánon, umá, úmhon, ísip, isípon, pa, tíndog, tindogón","This suf?x occurs in the following tenses:
 1.) The passive impersonal imperative.
 Buháta iní. Do this. (búhat, buháton).
 Higugmaá kag tahúra (—úda) ang ímo
@@ -225,3 +225,22 @@ agéw,1,ágew,,,,,,,,,,,,,,,,,,,,,"See agéu, ágeu",,,,,,,,,,,
 ághò,1,,A small tree much used for fences.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ághon,1,,"Compass, mariner’s compass.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 agî,1,,"Soft, effeminate, not manly, said of men with feminine voice and manners, hermaphrodite.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ági,2,,"Passage, trace, incident, event","To go by, pass by, pass through.",,Ang mga ági kag bilín sang salâ.,The traces and remains of sin. ,Ang mga ági sang íya kabúhì.,The incidents of his life.,"Kon magági ka dirí, hapíti kamí.","If you pass this way, visit us.","Indì ka makaági dirâ, kay nakodalán ang umá.","You cannot pass through there, for the field is fenced in.",Ang dálan nga íla ginágyan (ginagíhan)—.,The road over which they passed—. ,Iági akó siníng tulún- an sa kay Fuláno.,Kindly hand this book over to N.N. in passing.,Buás ágyon ko ikáw.,Tomorrow I’ll call for you in passing (and take you along).,,,,,,Buás ágyan ko ikáw.,Tomorrow I’ll visit you on my way.,Paágyon mo kamí sa ímo umá.,Let us pass through your field.,Dílì mo pagpaágyan sa íla ang áton umá.,Don’t allow them to pass through our field. ,Walâ pa akó kaági (makaági) dídto.,"I have never been there yet, I have had no occasion to pass that way, I have not seen or passed that place at all.",,
+agí-ági,1,,"Passing, transitory, transient, going by or through occasionally","To pass by occasionally, to visit now and then.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agî-ágì,2,,Dim. of agî.,"A little effeminate, womanish.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agî-agión,1,,See the foregoing agî-ágì.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agíd-ágid,1,,"Similar, like, resembling","To resemble, to be like or similar.",,Nagaagíd-ágid silá sing pamatásan.,They resemble each other in their ways or behaviour.,"Agid-agída silá, kon nagaparého ang íla dágway.","Compare them to see, whether their shape is the same.","Iníng baláy, agíd- ágid sa ámon.",This house is something like ours. ,,,,,,,,,,,"ánggid, anggíd-ánggid",,,,,,,,,,,,
+agigísil,1,,The temple (of the head).,,,,,,,,,,,,,,,,,,,agigísing,,,,,,,,,,,,
+agigísing,1,,"The temple, the part of the head between the ear and forehead. ",,,,,,,,,,,,,,,,,,,dungán-dúngan,,,,,,,,,,,,
+agíhis,1,,A kind of small shell-fish.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agíl,1,,"Small, undersized, stunted. ",,,,,,,,,,,,,,,,,,,See agíl-agíl,,,,,,,,,,,,
+ágila,1,,Eagle,,,,,,,,,,,,,,,,,,,,,(Sp. águila),,,,,,,,,,
+agíl-agíl,1,,"Stunted in growth, undersized, lean and weak","To become stunted, etc.",,Agíl-agíl nga táo. ,An undersized person.,Nagagíl-agíl siá sa balatían.,He became stunted through illness.,,,,,,,,,,,,,arí-arí,,,,,,,,,,,,
+agíl-agilón,1,,"Stunted, kept back or checked in growth, underdeveloped.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agináldo,1,,"Christmas box, Christmas present",Mísas de Aguináldo—Solemn Votive-Masses celebrated early in the morning from the 16th to the 24th of December.,,,,,,,,,,,,,,,,,,,,(Sp. aguinaldo),,,,,,,,,,
+agipó,1,,"A firebrand, a partly burning or smouldering piece of wood.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agíron,1,,A kind of tall grass with sharp-edged blades.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agís-is,1,,"The mange, scab or itch of dogs and other domestic animals.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agis-isón,1,,"Mangy, scabby, itchy",Pertaining to the mange called agís-is.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+agísod,1,,"To follow one after another, to succeed regularly.",,,Agisóda (-óra) or iagísod ang ímo mga buluhatón.,Perform your tasks one after another. Do your various duties in regular order.,Paagisóda (-óra) ang mga bátà.,"Make the children follow in line, one behind the other.",,,,,,,,,,,,,"sunúd, dasón, abák-abák",The plural form alagísod is more in use,,,,,,,,,,,
+áglot,1,,A harsh sound of creaking or grating,"To creak, to grate.",,Ang balás nagaáglot sa ngípon.,Sand grates on the teeth.,Ang balás nagapaáglot sang ngípon.,Sand makes the teeth grate.,,,,,,,,,,,,,ágrot,,,,,,,,,,,,
