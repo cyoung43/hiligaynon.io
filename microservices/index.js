@@ -26,10 +26,10 @@ exports.handler = async function (event) {
             response = await getWords()
             break
         case event.httpMethod === 'GET' && event.path === WORD_PATH:
-            response = await getWord(event.queryStringParameters.word_id)
+            response = await getWord(event.queryStringParameters.word)
             break
         default:
-            response = buildRespose(404, '404 not found')
+            response = buildResponse(404, '404 not found')
     }
 
     return response
@@ -70,7 +70,7 @@ const getWord = async (word_id) => {
     const params = {
         TableName: TABLE,
         Key: {
-            key: word_id
+            word: word_id
         }
     }
 
@@ -78,7 +78,11 @@ const getWord = async (word_id) => {
         .get(params)
         .promise()
         .then((response) => {
-            return buildResponse(200, response.Item)
+            if (response.Item) {
+                return buildResponse(200, response.Item)
+            }
+
+            return buildResponse(404, `Word ${word_id} not found. Please try again`) 
         }, (err) => {
             console.log('ERROR', err)
         })
