@@ -90,11 +90,14 @@ const getWord = async (word_id) => {
 
 // Response helper
 const buildResponse = (status_code, body) => {
-    return {
-        status_code,
+    const response = {
+        statusCode: status_code,
         headers: {
             'Content-type': 'application/json'
         },
-        body: JSON.stringify(body)
+        isBase64Encoded: false,
+        body: body
     }
+
+    return JSON.stringify(response)
 }
