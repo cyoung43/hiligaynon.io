@@ -8,6 +8,8 @@ AWS.config.update({
     region: AWS_REGION
 })
 
+// take a look at the unicorn.js file
+
 // Constants
 const dynamo_db = new AWS.DynamoDB.DocumentClient()
 const HEALTH_PATH = '/health'
