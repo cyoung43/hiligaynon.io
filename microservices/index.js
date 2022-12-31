@@ -10,6 +10,9 @@ AWS.config.update({
 
 // take a look at the unicorn.js file
 
+// Next step here could be either using the AWS course to build the serverless skills or justy trying to rework
+// these javascript functions to figure it out. Idk yet what is better.
+
 // Constants
 const dynamo_db = new AWS.DynamoDB.DocumentClient()
 const HEALTH_PATH = '/health'
