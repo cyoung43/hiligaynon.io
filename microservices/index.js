@@ -20,14 +20,15 @@ const WORDS_PATH = '/words'
 const WORD_PATH = '/word'
 
 exports.handler = async function (event, context, callback) {
-    console.log('Request event', event)
+    // console.log('Request event', event)
     
-    const request_body = JSON.parse(event.body)
+    const request_body = event.body
 
     console.log('Request body', request_body)
 
     try {
         const data = await get_word('ádlaw')
+        console.log('data', data)
 
         return { body: JSON.stringify(data) }
     }
@@ -40,9 +41,12 @@ const get_word = async (word, search) => {
     const params = {
         TableName: TABLE,
         Key: {
-            id: word
+            word,
+            sort: '1'
         }
     }
+
+    console.log('Params', params)
 
     try {
         const data = await dynamo_db.get(params).promise()
