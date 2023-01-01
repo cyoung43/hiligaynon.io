@@ -8,10 +8,8 @@ AWS.config.update({
     region: AWS_REGION
 })
 
-// take a look at the unicorn.js file
-
-// Next step here could be either using the AWS course to build the serverless skills or justy trying to rework
-// these javascript functions to figure it out. Idk yet what is better.
+// They use dynamodbclient in this API gateway tutorial vs the AWS.DynamoDB.DocumentClient()... why?
+// https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_lib_dynamodb.html
 
 // Constants
 const dynamo_db = new AWS.DynamoDB.DocumentClient()
