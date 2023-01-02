@@ -25,10 +25,8 @@ exports.handler = async function (event, context, callback) {
 
     console.log('Request body', request_body)
 
-    const { word, search } = request_body
-
     try {
-        const data = await get_word(word, search)
+        const data = await get_word(request_body)
         console.log('data', data)
 
         return { body: JSON.stringify(data) }
@@ -38,12 +36,12 @@ exports.handler = async function (event, context, callback) {
     }
 }
 
-const get_word = async (word, search) => {
+const get_word = async ({ word, sort }) => {
     const params = {
         TableName: TABLE,
         Key: {
             word,
-            sort: search
+            sort
         }
     }
 
