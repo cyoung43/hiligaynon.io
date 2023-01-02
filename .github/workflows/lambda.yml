@@ -1,10 +1,11 @@
 name: Deploy to AWS Lambda
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
+  # Trigger the workflow on push or pull request, but only for the main branch
   push:
     branches:
       - main
+    paths: # Only want it to trigger when changes are made with microservices directory
+      - '**/microservices/**'
 jobs:
 
 
