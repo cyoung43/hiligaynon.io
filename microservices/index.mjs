@@ -12,8 +12,6 @@ import {
 const TABLE = process.env.TABLE
 const KEY = process.env.PRIMARY_KEY
 
-// TEST COMMENT FOR WORKFLOW
-// They use dynamodbclient in this API gateway tutorial vs the AWS.DynamoDB.DocumentClient()... why?
 // https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_lib_dynamodb.html
 
 // Constants
