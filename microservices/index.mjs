@@ -31,10 +31,10 @@ export const handler = async function (event, context, callback) {
     console.log('Request body', request_body)
 
     try {
-        const data = await get_word(request_body)
-        console.log('data', data)
+        const { Item } = await get_word(request_body)
+        console.log('data', Item)
 
-        return { body: JSON.stringify(data.item) }
+        return { body: JSON.stringify(Item) }
     }
     catch (err) {
         return { error: err }
