@@ -23,7 +23,7 @@ const HEALTH_PATH = '/health'
 const WORDS_PATH = '/words'
 const WORD_PATH = '/word'
 
-exports.handler = async function (event, context, callback) {
+export const handler = async function (event, context, callback) {
     // console.log('Request event', event)
     
     const request_body = event.body
