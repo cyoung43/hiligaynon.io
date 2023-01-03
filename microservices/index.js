@@ -1,7 +1,3 @@
-// AWS SDK config
-const AWS = require('aws-sdk')
-const AWS_REGION = 'us-east-1'
-
 // docs: https://github.com/aws/aws-sdk-js-v3/blob/main/lib/lib-dynamodb/README.md
 // imports
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
