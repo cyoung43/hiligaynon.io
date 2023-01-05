@@ -27,11 +27,12 @@ export const handler = async function (event, context, callback) {
     const request_body = event.body
 
     console.log('Request body', request_body)
+    console.log('event', event)
 
     try {
         let body
-        switch (event?.routeKey) {
-            case 'GET /word/{id}/{sort}':
+        switch (event.routeKey) {
+            case 'GET /word/{id}/{key}':
                 const { Item } = await get_word({ word: event.pathParameters.id, sort: event.pathParameters.key })
                 console.log('data', Item)
                 body = Item
