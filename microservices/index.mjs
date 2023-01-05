@@ -46,7 +46,7 @@ export const handler = async function (event, context, callback) {
         }
 
 
-        return { body: JSON.stringify(Item) }
+        return { body }
     }
     catch (err) {
         return { error: err }
