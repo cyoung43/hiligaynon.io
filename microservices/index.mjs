@@ -29,8 +29,21 @@ export const handler = async function (event, context, callback) {
     console.log('Request body', request_body)
 
     try {
-        const { Item } = await get_word(request_body)
-        console.log('data', Item)
+        let body
+        switch (event?.routeKey) {
+            case 'GET /word/{id}/{sort}':
+                const { Item } = await get_word({ word: event.pathParameters.id, sort: event.pathParameters.key })
+                console.log('data', Item)
+                body = Item
+                break
+            case 'GET /words':
+                const { Items } = await get_all_words()
+                body = Items
+                break
+            default:
+                throw new Error(`Unsupported route: ${event.routeKey}`)
+        }
+
 
         return { body: JSON.stringify(Item) }
     }
@@ -51,6 +64,23 @@ const get_word = async ({ word, sort }) => {
     try {
         const data = await dynamo.send(
             new GetCommand(params)
+        )
+
+        return data
+    }
+    catch (err) {
+        return err
+    }
+}
+
+const get_all_words = async () => {
+    const params = {
+        TableName: TABLE
+    }
+
+    try {
+        const data = await dynamo.send(
+            new ScanCommand(params)
         )
 
         return data
