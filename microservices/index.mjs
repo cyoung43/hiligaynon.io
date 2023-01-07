@@ -23,19 +23,15 @@ const SINGLE_WORD = '/word'
 const PREFIX = '/api/v1'
 
 export const handler = async function (event, context, callback) {
-    // console.log('Request event', event)
-    
-    const request_body = event.body
-
-    console.log('Request body', request_body)
-    console.log('event', event)
 
     try {
         let body
         switch (event.routeKey) {
             case `GET ${PREFIX}${SINGLE_WORD}/{id}/{key}`:
                 const { Item } = await get_word({ word: event.pathParameters.id, sort: event.pathParameters.key })
-                console.log('data', Item)
+                if (!Item?.word) {
+                    body = { error: `The word ${event.pathParameters.id} does not exist with the associated sort key (${event.pathParameters.key})`}
+                }
                 body = Item
                 break
             case `GET ${PREFIX}${ALL_WORDS}`:
