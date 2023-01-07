@@ -18,8 +18,9 @@ const KEY = process.env.PRIMARY_KEY
 const client = new DynamoDBClient({ region: 'us-east-1' })
 const dynamo = DynamoDBDocumentClient.from(client)
 const HEALTH_PATH = '/health'
-const WORDS_PATH = '/words'
-const WORD_PATH = '/word'
+const ALL_WORDS = '/words'
+const SINGLE_WORD = '/word'
+const PREFIX = '/api/v1'
 
 export const handler = async function (event, context, callback) {
     // console.log('Request event', event)
@@ -32,19 +33,21 @@ export const handler = async function (event, context, callback) {
     try {
         let body
         switch (event.routeKey) {
-            case 'GET /word/{id}/{key}':
+            case `GET ${PREFIX}${SINGLE_WORD}/{id}/{key}`:
                 const { Item } = await get_word({ word: event.pathParameters.id, sort: event.pathParameters.key })
                 console.log('data', Item)
                 body = Item
                 break
-            case 'GET /words':
+            case `GET ${PREFIX}${ALL_WORDS}`:
                 const { Items } = await get_all_words()
                 body = Items
                 break
+            case `GET ${PREFIX}${HEALTH_PATH}`:
+                body = { message: 'Okay man gid ang API health di!' }
             default:
+                body = { err: `Unsupported route ${event.routeKey}` }
                 throw new Error(`Unsupported route: ${event.routeKey}`)
         }
-
 
         return { body }
     }
