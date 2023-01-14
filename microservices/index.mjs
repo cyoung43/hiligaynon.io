@@ -48,7 +48,7 @@ export const handler = async function (event, context, callback) {
         return { body }
     }
     catch (err) {
-        return { error: err }
+        return { error: err.message }
     }
 }
 
