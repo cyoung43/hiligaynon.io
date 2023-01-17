@@ -39,9 +39,9 @@ export const handler = async function (event, context, callback) {
                 body = Items
                 break
             case `GET ${PREFIX}${HEALTH_PATH}`:
-                body = { message: 'Okay man gid ang API health di!' }
+                body = 'Okay man gid ang API health di!'
             default:
-                body = { err: `Unsupported route ${event.routeKey}` }
+                body = `Unsupported route ${event.routeKey}`
                 throw new Error(`Unsupported route: ${event.routeKey}`)
         }
 
