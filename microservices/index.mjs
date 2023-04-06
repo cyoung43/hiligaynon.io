@@ -31,8 +31,10 @@ export const handler = async function (event, context, callback) {
         // TO DO: get switch case statements working
         if (routeKey == `GET ${PREFIX}${SINGLE_WORD}/{id}/{key}`) {
             const { Item } = await get_word({ word: event.pathParameters.id, sort: event.pathParameters.key })
-            if (!Object.keys(Item).length) {
+            if (typeof Item == 'undefined') {
                 body = { error: `The word *${event.pathParameters.id}* does not exist with the associated sort key (${event.pathParameters.key})`}
+                
+                return { body }
             }
             body = Item
         }
