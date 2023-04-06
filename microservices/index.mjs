@@ -26,23 +26,26 @@ export const handler = async function (event, context, callback) {
 
     try {
         let body
-        switch (event.routeKey) {
-            case `GET ${PREFIX}${SINGLE_WORD}/{id}/{key}`:
-                const { Item } = await get_word({ word: event.pathParameters.id, sort: event.pathParameters.key })
-                if (!Item?.word) {
-                    body = { error: `The word ${event.pathParameters.id} does not exist with the associated sort key (${event.pathParameters.key})`}
-                }
-                body = Item
-                break
-            case `GET ${PREFIX}${ALL_WORDS}`:
-                const { Items } = await get_all_words()
-                body = Items
-                break
-            case `GET ${PREFIX}${HEALTH_PATH}`:
-                body = 'Okay man gid ang API health di!'
-            default:
-                body = `Unsupported route ${event.routeKey}`
-                throw new Error(`Unsupported route: ${event.routeKey}`)
+        const { routeKey } = event
+
+        // TO DO: get switch case statements working
+        if (routeKey == `GET ${PREFIX}${SINGLE_WORD}/{id}/{key}`) {
+            const { Item } = await get_word({ word: event.pathParameters.id, sort: event.pathParameters.key })
+            if (!Object.keys(Item).length) {
+                body = { error: `The word *${event.pathParameters.id}* does not exist with the associated sort key (${event.pathParameters.key})`}
+            }
+            body = Item
+        }
+        else if (routeKey == `GET ${PREFIX}${ALL_WORDS}`) {
+            const { Items } = await get_all_words()
+            body = Items
+        }
+        else if (routeKey == `GET ${PREFIX}${HEALTH_PATH}`) {
+            body = 'Okay man gid ang API health naton!'
+        }
+        else {
+            body = `Unsupported route ${event.routeKey}`
+            throw new Error(`Unsupported route: ${event.routeKey}`)
         }
 
         return { body }
